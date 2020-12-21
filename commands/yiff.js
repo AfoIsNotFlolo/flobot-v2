@@ -1,6 +1,6 @@
 const Action = "yiff";
 const IsNSFW = true;
-const APIVer = "v1";
+const APIVer = "v2";
 const axios = require("axios");
 const fs = require("fs");
 const e621 = require("../e621.js");

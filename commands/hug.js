@@ -15,7 +15,7 @@ module.exports = function(Message, Client) {
     Message.channel.send("Mention 1 person, silly!");
   } else {
     let MentionedUser = Mentions[0].id;
-    let Pref = IsNSFW ? "nsfw" : "sfw";
+    let Pref = "";
     let Class = `furry/${Pref}/${Action}`;
     let Endpoint = `https://api.furry.bot/v1/furry/sfw/hug/image`;
     Message.channel.send(Message.author.username + " **" + Action + "s** " + Mentions[0].username, {

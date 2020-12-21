@@ -1,6 +1,6 @@
 const Action = "suck";
 const IsNSFW = true;
-const APIVer = "v1";
+const APIVer = "v2";
 const axios = require("axios");
 const fs = require("fs");
 const e621 = require("../e621.js");
@@ -20,7 +20,7 @@ module.exports = function(Message, Client) {
     Message.channel.send("Mention 1 person, silly!");
   } else {
     let MentionedUser = Mentions[0].id;
-    let Pref = IsNSFW ? "nsfw" : "sfw";
+    let Pref = "";
     /*let Class = `furry/${Pref}/${Action}`;
     let Endpoint = `https://api.furry.bot/${APIVer}/${Class}/image`;
     Message.channel.send("<@!" + Message.author.id + "> **" + Action + "s** <@" + MentionedUser + ">", {

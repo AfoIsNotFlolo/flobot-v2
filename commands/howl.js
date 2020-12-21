@@ -1,6 +1,6 @@
 const Action = "howl";
 const IsNSFW = false;
-const APIVer = "v1";
+const APIVer = "v2";
 const axios = require("axios");
 const fs = require("fs");
 module.exports = function(Message, Client) {
