@@ -32,11 +32,11 @@ const SpecCmds = [
 const dogEmoji = String.fromCharCode("55357");
 
 const updateMemberCount = function() {
-  Client.channels.get("720771089038442553").edit({
+  /*Client.channels.get("720771089038442553").edit({
     name: dogEmoji
     + Client.guilds.get("720771088677601362").memberCount +
     " members" + dogEmoji
-  });
+  });*/
 }
 
 Client.on("ready", () => { // emitted when bot is ready
@@ -69,7 +69,7 @@ Client.on("message", (Message) => { // emitted whenever someone sends a message
       if (Guild && Guild.id == 720771088677601362 && !GuildMember.roles.find(r => r.id == 720784791577821275) && !SpecCmds.includes(Command)) {
         console.log("Special def req [" + Guild.id + "]");
         let isAllowed = false;
-        for (i in SpecList) {
+        for (let i in SpecList) {
           console.log(i, SpecList[i]);
           if (SpecList[i] == Channel.id) isAllowed = true;
         }
@@ -247,5 +247,8 @@ wsconnect();
 
 Client.login(Token); // log in
 
-app.get('/', (_, res) => res.sendStatus(200));
+app.get('/', (_, res) => {
+  console.log(_.method + ": "+ _.headers);
+  res.sendStatus(200);
+});
 app.listen(3000);
