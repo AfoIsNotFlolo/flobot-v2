@@ -60,7 +60,7 @@ module.exports = async function(msg, client, args) {
 		    ||
       	(id2 == 720754256621338646)*/false
       ) {
-      	let i = Math.floor(Math.random() * 98) + 88;
+      	let i = Math.floor(Math.random() * 76) + 54;
       	i = i > 100 ? 100 : i;
       	percent = `${i}%`;
       	numper = `${i}`;
