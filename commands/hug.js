@@ -17,7 +17,7 @@ module.exports = function(Message, Client) {
     let MentionedUser = Mentions[0].id;
     let Pref = "";
     let Class = `furry/${Pref}/${Action}`;
-    let Endpoint = `https://api.furry.bot/v1/furry/sfw/hug/image`;
+    let Endpoint = `https://api.furry.bot/v2/furry/hug/image`;
     Message.channel.send(Message.author.username + " **" + Action + "s** " + Mentions[0].username, {
       files: [
         {
