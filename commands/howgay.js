@@ -15,7 +15,7 @@ module.exports = function(Message, Arguments, Client) {
     //} else {
       let MentionedUser = Mentions[0] ? Mentions[0].id : Message.author.id;
       let RNG = seedrandom.xor4096(MentionedUser);
-      let PercentCute = MentionedUser == 399955643731017729 ? 100 : Math.floor(RNG() * 100);
+      let PercentCute = Math.floor(RNG() * 100);
       if (PercentCute < 50) {
         PercentCute = 100 - (PercentCute - 10);
       }
