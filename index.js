@@ -73,7 +73,7 @@ Client.on("message", (Message) => { // emitted whenever someone sends a message
           if (SpecList[i] == Channel.id) isAllowed = true;
         }
         if (!isAllowed) {
-          Message.channel.send("FloBot commands can only be used by Nitro boosters in this channel!~ >w>\n(please keep bot commands in <#789017943966744598> and <#790017755004796978>)").then(msg => {
+          Message.channel.send(">~> (please keep bot commands in <#789017943966744598> and <#790017755004796978>)").then(msg => {
             setTimeout(() => {
               Message.delete().catch();
               msg.delete().catch();
