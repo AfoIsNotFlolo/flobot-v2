@@ -299,7 +299,7 @@ module.exports = function(Message, Arguments, Client) {
 	const author = Message.author.id;
 	if (!listenerTable[author]) {
 		const t = Math.floor(Math.random() * topicList.length) - 1;
-		if (!Message.member.roles.find(r => r.id == 720784791577821275))
+		if (false)//!Message.member.roles.find(r => r.id == 720784791577821275))
 			listenerTable[author] = Date.now();
 		setTimeout(() => {
 			listenerTable[author] = false;
